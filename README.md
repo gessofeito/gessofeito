@@ -32,11 +32,11 @@ Publique o diretório `dist/` em Vercel ou outro host estático (preset Vite, co
 
 - `index.html` — estrutura original do site, com o mesmo texto e seções.
 - `src/style.css` — CSS original e responsividade, sem reformulação.
-- `src/main.js` — menu mobile, FAQ, reveal no scroll, formulário WhatsApp e configuração de contatos.
+- `src/main.js` — menu mobile, FAQ, reveal no scroll e formulário WhatsApp.
 - `public/assets/` — imagens PNG/JPEG originais extraídas sem recompressão.
 
 ## Personalizar contatos
 
-Edite a constante `SITE` no começo de `src/main.js`. **Os contatos fornecidos no HTML original são exemplos** (`5500000000000`, `contato@seudominio.com.br` e `Cidade – UF`), e foram mantidos para preservar o original.
+Edite os links de WhatsApp e e-mail e a cidade no rodapé de `index.html`. O formulário usa o mesmo link de WhatsApp do rodapé.
 
 O Google Fonts é carregado online, como no HTML original. As imagens da página ficam locais e o projeto não precisa de React.

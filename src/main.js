@@ -1,18 +1,3 @@
-
-/* ==========================================================
-   CONFIGURAÇÃO — edite apenas este bloco.
-   Os dados abaixo são refletidos no rodapé e no botão do
-   formulário (WhatsApp). Use o número só com dígitos:
-   código do país + DDD + número (ex.: 5511999999999).
-   ========================================================== */
-const SITE = {
-  whatsapp: '5500000000000',            // número usado no link wa.me
-  whatsappDisplay: '(00) 00000-0000',   // como o número aparece na tela
-  email: 'contato@seudominio.com.br',   // e-mail de contato
-  city: 'Cidade – UF'                   // cidade e estado
-};
-/* ========================================================== */
-
 (function(){
   document.documentElement.classList.add('js');
 
@@ -20,12 +5,6 @@ const SITE = {
   document.querySelectorAll('img[data-k]:not([src])').forEach(function(img){
     var o = document.querySelector('img[data-k="'+img.dataset.k+'"][src]');
     if(o) img.src = o.src;
-  });
-
-  // dados do site
-  document.querySelectorAll('[data-site]').forEach(function(el){ el.textContent = SITE[el.dataset.site]; });
-  document.querySelectorAll('[data-site-href]').forEach(function(el){
-    el.href = el.dataset.siteHref === 'email' ? 'mailto:'+SITE.email : 'https://wa.me/'+SITE.whatsapp;
   });
 
   // cabeçalho
@@ -57,6 +36,7 @@ const SITE = {
     items.forEach(function(el){ io.observe(el); });
   } else items.forEach(function(el){ el.classList.add('in'); });
 
+
   // formulário -> WhatsApp
   document.getElementById('form').addEventListener('submit', function(e){
     e.preventDefault();
@@ -68,7 +48,8 @@ const SITE = {
             'Telefone: ' + f.tel.value.trim() + '\n' +
             'Tipo de serviço: ' + f.tipo.value + '\n' +
             'Mensagem: ' + f.msg.value.trim();
-    var url = 'https://wa.me/' + SITE.whatsapp + '?text=' + encodeURIComponent(t);
-    window.open(url, '_blank', 'noopener');
+    const url = new URL(document.getElementById('whatsapp-contact').href);
+    url.searchParams.set('text', t);
+    window.open(url.href, '_blank', 'noopener,noreferrer');
   });
 })();

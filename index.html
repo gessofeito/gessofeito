@@ -171,7 +171,7 @@
 <div class="reveal">
 <h2>Vamos tirar o seu projeto do <em>papel</em>?</h2>
 <p class="lead">Conte o que você precisa e receba um orçamento sem compromisso.</p>
-<form id="form" novalidate="">
+<form id="form" method="post" novalidate="">
 <div class="f2">
 <div><label for="nome">Nome</label><input autocomplete="name" id="nome" name="nome" required="" type="text"/></div>
 <div><label for="tel">Telefone</label><input autocomplete="tel" id="tel" inputmode="tel" name="tel" type="tel"/></div>
@@ -180,6 +180,7 @@
 <select id="tipo" name="tipo"><option>Forro</option><option>Sanca</option><option>Parede ou divisória</option><option>Nichos e painéis</option><option>Outro</option></select></div>
 <div><label for="msg">Mensagem</label><textarea id="msg" name="msg"></textarea></div>
 <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+<p class="form-privacy">O formulário abre o WhatsApp com os dados preenchidos para você revisar a mensagem. <a href="/privacidade.html">Política de privacidade</a></p>
 </form>
 </div>
 <div class="photo reveal"><img alt="Parede de TV com nichos verticais iluminados em acabamento de gesso" data-k="E" height="896" style="object-position:38% 50%" width="1200"/></div>
@@ -205,14 +206,45 @@
 </div>
 <div>
 <h4>Contato</h4>
-<ul>
-<li>WhatsApp: <a data-site="whatsappDisplay" data-site-href="whatsapp" href="https://wa.me/5500000000000">(00) 00000-0000</a></li>
-<li>E-mail: <a data-site="email" data-site-href="email" href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></li>
-<li data-site="city">Cidade – UF</li>
+<ul class="contact-links">
+<li>
+<a aria-label="Conversar pelo WhatsApp" href="https://wa.me/5581989231346" id="whatsapp-contact" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/>
+<path d="M9.1 7.5 10.4 10l-1 1c.7 1.5 1.9 2.7 3.4 3.4l1-1 2.7 1.3c0 1.1-.9 1.9-1.9 1.9C10.8 16.3 7.7 13.2 7.4 9.4c0-1 .7-1.9 1.7-1.9Z"/>
+</svg>
+<span class="contact-label">WhatsApp</span><span aria-hidden="true">↗</span>
+</a>
+</li>
+<li>
+<a aria-label="Enviar e-mail" href="mailto:gessofeito0ficial@gmail.com">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="5" width="18" height="14" rx="2"/>
+<path d="m4 7 8 6 8-6"/>
+</svg>
+<span class="contact-label">E-mail</span><span aria-hidden="true">↗</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Gravat%C3%A1%2C%20PE" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/>
+<circle cx="12" cy="10" r="2.5"/>
+</svg>
+<span class="contact-label">Gravatá - PE</span><span aria-hidden="true">↗</span>
+</a>
+</li>
 </ul>
 </div>
 </div>
-<p class="copy">© 2026 Gesso Feito. Todos os direitos reservados.</p>
+<div class="copy footer-bottom">
+<p>© 2026 Gesso Feito. Todos os direitos reservados.</p>
+<nav aria-label="Informações legais">
+<a href="/privacidade.html">Privacidade</a>
+<a href="/cookies.html">Cookies</a>
+<a href="/termos.html">Termos de uso</a>
+</nav>
+</div>
 </div>
 </footer>
 
